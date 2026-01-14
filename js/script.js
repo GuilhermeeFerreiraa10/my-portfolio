@@ -1,21 +1,32 @@
-// Espera o documento carregar totalmente
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+const btn = document.getElementById("theme-toggle");
+const body = document.body;
 
-    // Verifica se o botão existe antes de adicionar o evento
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('light-theme');
-            
-            // Salva a preferência para o usuário não ter que trocar toda hora
-            const mode = body.classList.contains('light-theme') ? 'light' : 'dark';
-            localStorage.setItem('theme', mode);
-        });
+// Função para definir o ícone correto
+function atualizarIcone() {
+    if (body.classList.contains("light-theme")) {
+        btn.innerHTML = '<i class="fa-solid fa-sun"></i>'; // Ícone de Sol no tema claro
+    } else {
+        btn.innerHTML = '<i class="fa-solid fa-moon"></i>'; // Ícone de Lua no tema escuro
     }
-});
-
-// Aplica o tema salvo assim que a página abre
-if (localStorage.getItem('theme') === 'light') {
-    document.body.classList.add('light-theme');
 }
+
+// Verifica se o usuário já tinha uma preferência salva
+const temaSalvo = localStorage.getItem("tema");
+if (temaSalvo === "light") {
+    body.classList.add("light-theme");
+}
+
+// Inicializa o ícone correto ao carregar a página
+atualizarIcone();
+
+// Evento de clique
+btn.addEventListener("click", () => {
+    body.classList.toggle("light-theme");
+    
+    // Salva a escolha do usuário
+    const novoTema = body.classList.contains("light-theme") ? "light" : "dark";
+    localStorage.setItem("tema", novoTema);
+    
+    // Muda o ícone
+    atualizarIcone();
+});
