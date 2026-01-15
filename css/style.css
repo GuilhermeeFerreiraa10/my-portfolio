@@ -42,15 +42,15 @@ nav a { color: var(--text-color); text-decoration: none; font-weight: bold; }
     border: 3px solid var(--primary-color);
     margin-bottom: 20px;
     box-shadow: 0 0 20px rgba(0, 120, 212, 0.4);
-    transition: all 0.4s ease; /* Transição suave para o movimento e brilho */
+    transition: all 0.4s ease; 
     cursor: pointer;
     object-fit: cover;
 }
 
 .foto-perfil:hover {
-    transform: scale(1.1) rotate(3deg); /* Aumenta e dá uma leve inclinada */
-    box-shadow: 0 0 35px var(--primary-color); /* Intensifica o brilho azul */
-    border-color: #fff; /* A borda muda para branco no hover para dar contraste */
+    transform: scale(1.1) rotate(3deg); 
+    box-shadow: 0 0 35px var(--primary-color);
+    border-color: #fff; 
 }
 header { height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .foto-perfil { width: 160px; height: 160px; border-radius: 50%; border: 3px solid var(--primary-color); margin-bottom: 20px; box-shadow: 0 0 20px rgba(0, 120, 212, 0.4); }
