@@ -29,6 +29,6 @@ Abaixo estão as ferramentas e linguagens utilizadas na construção deste proje
 
 O projeto está hospedado na Vercel e pode ser acessado através do link abaixo:
 
-🔗 [**Clique aqui para ver o site ao vivo**](https://my-portfolio-guilhermeferreira.vercel.app/))
+🔗 [**Clique aqui para ver o site ao vivo**](https://my-portfolio-guilhermeferreira.vercel.app/)
 
 ---
